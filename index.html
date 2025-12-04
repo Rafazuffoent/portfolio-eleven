@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hornet – Portfolio</title>
+
+<style>
+  body {
+  background: url("fundo.png") no-repeat center fixed;
+  background-size: cover;
+    margin: 0;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .historia {
+
+  text-align: center;
+
+  }
+
+    .conhecimento {
+
+  text-align: center;
+
+  }
+
+    .armas {
+
+  text-align: center;
+
+  }
+
+    .persona {
+
+  text-align: center;
+
+  }
+
+      .fim {
+
+  text-align: center;
+
+  }
+
+  /* COLUNA DE TEXTO CENTRAL */
+  .conteudo {
+    width: min(700px, 90%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;        /* espaço entre seções */
+  }
+
+  /* Cada parágrafo/tópico */
+  .bloco {
+    position: relative;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .fonte {
+    position: relative;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgb(102, 102, 102);
+      text-align: center;
+  }
+
+  /* IMAGENS LATERAIS */
+  .img-lateral {
+    position: absolute;
+    top: 50%;
+    width: 260px;
+    transform: translateY(-50%) translateX(0px);
+    opacity: 0;
+    filter: blur(6px);
+    transition: 1.2s ease;
+  }
+
+  /* anima quando o bloco passa o mouse ou encosta no texto */
+  .bloco:hover .img-lateral {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(-50%) translateX(0);
+  }
+
+  /* lado esquerdo */
+  .esq {
+    left: -300px;
+  }
+
+  /* lado direito */
+  .dir {
+    right: -300px;
+  }
+
+
+/* ============================
+        RESPONSIVIDADE
+   ============================ */
+@media (max-width: 800px) {
+
+  /* diminui as imagens */
+  .img-lateral {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 180px;
+    margin: 0 auto 20px auto;  /* centraliza */
+    transform: none;
+    opacity: 1; /* SEM hover → sempre visível */
+    filter: none;
+  }
+
+  /* remove posição lateral */
+  .esq, .dir {
+    left: 0;
+    right: 0;
+  }
+
+  /* texto continua normal */
+  .bloco {
+    text-align: center;
+    padding-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="conteudo">
+
+  <div class="bloco">
+    <img class="img-lateral esq" src="eleven1.png" alt="Hornet 1">
+    <h2 class="historia">Quem sou eu?</h2>
+    <p>
+      A cobaia número onze, ou, agora, Jane Hopper. Fugitiva do laboratório de experimentos soviéticos em Hawkins, vítima das crueldades lá realizadas, e responsável pelo exílio de Henry, ou, cobaia 001, ou Vecna, ou Sr.Fulano.
+    </p>
+  </div>
+
+  <div class="bloco">
+    <img class="img-lateral dir" src="eleven2.png" alt="Hornet 2">
+    <h2 class="conhecimento">Escolaridade</h2>
+    <p>
+      Com 16 anos, 'El'encontra-se no primeiro ano do Ensino Médio, tendo iniciado seus estudos no colégio de Hawkins após sua adoção por Hopper. Eleven iniciou seus estudos no período em que seus poderes estavam ausentes, fazendo-a passar por um processo de acostumar-se com a nova realidade, no ambiente escolar.
+    </p>
+  </div>
+
+  <div class="bloco">
+    <img class="img-lateral esq" src="eleveb3.png" alt="Hornet 3">
+    <h2 class="armas">Habilidades</h2>
+    <p>
+      Os poderes da Eleven incluem telecinese, a habilidade de levitar objetos e manipular a matéria com a mente; telepatia, que permite a comunicação mental; visão remota, usada para ver lugares distantes; e abertura/fechamento de portais para dimensões como o Mundo Invertido. 
+    </p>
+  </div>
+
+  <div class="bloco">
+    <img class="img-lateral dir" src="eleven4.png" alt="Hornet 4">
+    <h2 class="persona">Personalidade</h2>
+    <p>
+      A personalidade da Eleven é marcada pela timidez inicial e dificuldade de socialização, devido ao seu isolamento no laboratório, mas evoluiu para uma figura ferozmente protetora e leal aos seus amigos. Ela é emocionalmente forte, com suas habilidades de telecinese sendo diretamente ligadas aos seus sentimentos, como amor, medo e raiva, o que a torna poderosa para proteger quem ama.
+    </p>
+  </div>
+  
+  <div class="fonte">
+    <h4>Site de amostra desenvolvido por: Rafael Zuffo Entschev</h4> <h4 class="fim"> Fonte: <a href="https://hollowknight-fandom-com.translate.goog/wiki/Hornet?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc">wiki fandom</a></h4> 
+
+
+
+  </div>
+
+
+</div>
+
+</body>
+</html>
